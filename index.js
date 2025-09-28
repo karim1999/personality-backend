@@ -3,14 +3,13 @@ import fetch from "node-fetch";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-// ✅ Route رئيسي يرد على "/"
+// ✅ Route رئيسي
 app.get("/", (req, res) => {
-  res.send("✅ Personality Backend is running!");
+  res.send("✅ Personality Backend is running on Vercel!");
 });
 
 // تحديد الفئة العمرية
@@ -45,7 +44,7 @@ app.get("/questions-by-age", async (req, res) => {
   }
 });
 
-// تحليل الإجابات وتحديد الشخصية + جلب كل تفاصيلها
+// تحليل الإجابات
 app.post("/analyze-answers", async (req, res) => {
   const { age, answers } = req.body;
 
@@ -54,11 +53,11 @@ app.post("/analyze-answers", async (req, res) => {
   }
 
   try {
-    // حساب الشخصية الأكثر تكراراً
     const personalityCount = {};
     answers.forEach((ans) => {
       if (ans.personality) {
-        personalityCount[ans.personality] = (personalityCount[ans.personality] || 0) + 1;
+        personalityCount[ans.personality] =
+          (personalityCount[ans.personality] || 0) + 1;
       }
     });
 
@@ -84,7 +83,6 @@ app.post("/analyze-answers", async (req, res) => {
       });
     }
 
-    // جلب كل التفاصيل من Directus
     const queryUrl = `http://localhost:8055/items/personalities?filter[type][_eq]=${bestPersonality}`;
     const response = await fetch(queryUrl);
     const data = await response.json();
@@ -116,8 +114,5 @@ app.post("/analyze-answers", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
-
+// ✅ ده اللي بيخلي Vercel يشتغل
 export default app;
-
