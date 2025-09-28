@@ -1,4 +1,0 @@
-"scripts": {
-  "start": "node server.js",
-  "vercel-build": "echo 'nothing to build'"
-}
