@@ -3,10 +3,15 @@ import fetch from "node-fetch";
 import cors from "cors";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+// ✅ Route رئيسي يرد على "/"
+app.get("/", (req, res) => {
+  res.send("✅ Personality Backend is running!");
+});
 
 // تحديد الفئة العمرية
 function getAgeGroup(age) {
