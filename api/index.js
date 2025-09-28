@@ -7,6 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ✅ Route رئيسي
+app.get("/", (req, res) => {
+  res.send("✅ Personality Backend is running on Vercel!");
+});
+
 // تحديد الفئة العمرية
 function getAgeGroup(age) {
   if (age < 18) return "under-18";
@@ -21,7 +26,7 @@ app.get("/questions-by-age", async (req, res) => {
   const ageGroup = getAgeGroup(age);
 
   try {
-    const queryUrl = `${process.env.DIRECTUS_URL}/items/questions?filter[age_group][_eq]=${ageGroup}`;
+    const queryUrl = `http://localhost:8055/items/questions?filter[age_group][_eq]=${ageGroup}`;
     const response = await fetch(queryUrl);
     const data = await response.json();
 
@@ -48,11 +53,11 @@ app.post("/analyze-answers", async (req, res) => {
   }
 
   try {
-    // حساب الشخصية الأكثر تكراراً
     const personalityCount = {};
     answers.forEach((ans) => {
       if (ans.personality) {
-        personalityCount[ans.personality] = (personalityCount[ans.personality] || 0) + 1;
+        personalityCount[ans.personality] =
+          (personalityCount[ans.personality] || 0) + 1;
       }
     });
 
@@ -78,8 +83,7 @@ app.post("/analyze-answers", async (req, res) => {
       });
     }
 
-    // جلب التفاصيل من Directus
-    const queryUrl = `${process.env.DIRECTUS_URL}/items/personalities?filter[type][_eq]=${bestPersonality}`;
+    const queryUrl = `http://localhost:8055/items/personalities?filter[type][_eq]=${bestPersonality}`;
     const response = await fetch(queryUrl);
     const data = await response.json();
 
@@ -110,4 +114,5 @@ app.post("/analyze-answers", async (req, res) => {
   }
 });
 
+// ✅ ده اللي بيخلي Vercel يشتغل
 export default app;
