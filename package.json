@@ -7,7 +7,7 @@
     "lint": "echo \"no lint configured\""
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "openai": "^4.0.0",
