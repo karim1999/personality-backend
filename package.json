@@ -2,14 +2,11 @@
   "name": "personality-backend",
   "version": "1.0.0",
   "description": "Personality backend adapted for Vercel",
-  "main": "api/hello.js",
   "scripts": {
-    "start": "node ./api/hello.js",
     "dev": "vercel dev",
     "lint": "echo \"no lint configured\""
   },
   "engines": {
-    "node": "18.x"
     "node": "22.x"
   },
   "dependencies": {
