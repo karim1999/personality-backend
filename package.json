@@ -1,8 +1,19 @@
 {
   "name": "personality-backend",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Personality backend adapted for Vercel",
+  "main": "api/hello.js",
+  "scripts": {
+    "start": "node ./api/hello.js",
+    "dev": "vercel dev",
+    "lint": "echo \"no lint configured\""
+  },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+    "openai": "^4.0.0",
+    "node-fetch": "^3.3.1"
+  },
+  "type": "commonjs"
 }
