@@ -1,0 +1,204 @@
+[
+  {
+    "age_group": "under-18",
+    "question_text": "What is your favorite subject in school?",
+    "options": [
+      { "text": "Math", "personality": "INTJ" },
+      { "text": "Science", "personality": "ENTP" },
+      { "text": "Art", "personality": "ISFP" },
+      { "text": "History", "personality": "INTP" }
+    ]
+  },
+  {
+    "age_group": "under-18",
+    "question_text": "Do you enjoy playing with friends?",
+    "options": [
+      { "text": "Yes", "personality": "ESFP" },
+      { "text": "No", "personality": "ISTP" },
+      { "text": "Sometimes", "personality": "ISFJ" }
+    ]
+  },
+  {
+    "age_group": "under-18",
+    "question_text": "What do you usually do after school?",
+    "options": [
+      { "text": "Study", "personality": "ISTJ" },
+      { "text": "Play games", "personality": "ESFP" },
+      { "text": "Read books", "personality": "INFJ" },
+      { "text": "Hang out with friends", "personality": "ENFP" }
+    ]
+  },
+  {
+    "age_group": "under-18",
+    "question_text": "How do you feel in group activities?",
+    "options": [
+      { "text": "I like leading", "personality": "ENTJ" },
+      { "text": "I like helping", "personality": "ESFJ" },
+      { "text": "I prefer being quiet", "personality": "INFP" },
+      { "text": "I enjoy discussions", "personality": "ENFP" }
+    ]
+  },
+  {
+    "age_group": "under-18",
+    "question_text": "What do you dream of becoming in the future?",
+    "options": [
+      { "text": "Scientist", "personality": "INTP" },
+      { "text": "Artist", "personality": "ISFP" },
+      { "text": "Teacher", "personality": "ENFJ" },
+      { "text": "Business owner", "personality": "ESTP" }
+    ]
+  },
+
+  {
+    "age_group": "18-25",
+    "question_text": "What motivates you most?",
+    "options": [
+      { "text": "Knowledge", "personality": "INTP" },
+      { "text": "Helping others", "personality": "INFJ" },
+      { "text": "Success", "personality": "ENTJ" },
+      { "text": "Fun", "personality": "ESFP" }
+    ]
+  },
+  {
+    "age_group": "18-25",
+    "question_text": "How do you prefer to study?",
+    "options": [
+      { "text": "Alone", "personality": "INTJ" },
+      { "text": "With friends", "personality": "ENFP" },
+      { "text": "With a mentor", "personality": "ENFJ" },
+      { "text": "Practical learning", "personality": "ISTP" }
+    ]
+  },
+  {
+    "age_group": "18-25",
+    "question_text": "What do you value most in a job?",
+    "options": [
+      { "text": "High salary", "personality": "ESTJ" },
+      { "text": "Passion", "personality": "INFP" },
+      { "text": "Stability", "personality": "ISFJ" },
+      { "text": "Creativity", "personality": "ENTP" }
+    ]
+  },
+  {
+    "age_group": "18-25",
+    "question_text": "How do you spend your free time?",
+    "options": [
+      { "text": "Reading", "personality": "INFJ" },
+      { "text": "Sports", "personality": "ESTP" },
+      { "text": "Music & Art", "personality": "ISFP" },
+      { "text": "Parties", "personality": "ESFP" }
+    ]
+  },
+  {
+    "age_group": "18-25",
+    "question_text": "How do you make decisions?",
+    "options": [
+      { "text": "Logically", "personality": "INTJ" },
+      { "text": "Emotionally", "personality": "INFP" },
+      { "text": "Based on advice", "personality": "ESFJ" },
+      { "text": "Quickly", "personality": "ESTP" }
+    ]
+  },
+
+  {
+    "age_group": "26-40",
+    "question_text": "What is your top priority in life?",
+    "options": [
+      { "text": "Career", "personality": "ENTJ" },
+      { "text": "Family", "personality": "ISFJ" },
+      { "text": "Personal growth", "personality": "INFJ" },
+      { "text": "Adventure", "personality": "ESFP" }
+    ]
+  },
+  {
+    "age_group": "26-40",
+    "question_text": "How do you handle problems?",
+    "options": [
+      { "text": "Plan solutions", "personality": "INTJ" },
+      { "text": "Talk with others", "personality": "ENFJ" },
+      { "text": "Find creative ways", "personality": "ENTP" },
+      { "text": "Stay calm & adapt", "personality": "ISTP" }
+    ]
+  },
+  {
+    "age_group": "26-40",
+    "question_text": "How do you prefer to work?",
+    "options": [
+      { "text": "Team leader", "personality": "ENTJ" },
+      { "text": "Team player", "personality": "ESFJ" },
+      { "text": "Independent", "personality": "INTP" },
+      { "text": "Flexible role", "personality": "ENFP" }
+    ]
+  },
+  {
+    "age_group": "26-40",
+    "question_text": "What do you usually do on weekends?",
+    "options": [
+      { "text": "Work more", "personality": "ESTJ" },
+      { "text": "Relax at home", "personality": "ISFP" },
+      { "text": "Go out with friends", "personality": "ESFP" },
+      { "text": "Learn something new", "personality": "INTP" }
+    ]
+  },
+  {
+    "age_group": "26-40",
+    "question_text": "What is most important in relationships?",
+    "options": [
+      { "text": "Trust", "personality": "INFJ" },
+      { "text": "Fun", "personality": "ESFP" },
+      { "text": "Support", "personality": "ISFJ" },
+      { "text": "Growth", "personality": "ENFP" }
+    ]
+  },
+
+  {
+    "age_group": "40+",
+    "question_text": "What do you value most in life now?",
+    "options": [
+      { "text": "Family", "personality": "ISFJ" },
+      { "text": "Health", "personality": "ISTJ" },
+      { "text": "Wisdom", "personality": "INFJ" },
+      { "text": "Freedom", "personality": "ENTP" }
+    ]
+  },
+  {
+    "age_group": "40+",
+    "question_text": "How do you prefer to spend your evenings?",
+    "options": [
+      { "text": "Reading", "personality": "INTP" },
+      { "text": "Watching TV", "personality": "ISFP" },
+      { "text": "Family time", "personality": "ESFJ" },
+      { "text": "Social activities", "personality": "ENFP" }
+    ]
+  },
+  {
+    "age_group": "40+",
+    "question_text": "What is your approach to challenges?",
+    "options": [
+      { "text": "Logical analysis", "personality": "INTJ" },
+      { "text": "Experience-based", "personality": "ISTJ" },
+      { "text": "Emotional support", "personality": "ENFJ" },
+      { "text": "Creative ideas", "personality": "ENTP" }
+    ]
+  },
+  {
+    "age_group": "40+",
+    "question_text": "What do you enjoy teaching younger generations?",
+    "options": [
+      { "text": "Discipline", "personality": "ESTJ" },
+      { "text": "Creativity", "personality": "ISFP" },
+      { "text": "Values", "personality": "INFJ" },
+      { "text": "Skills", "personality": "ISTP" }
+    ]
+  },
+  {
+    "age_group": "40+",
+    "question_text": "What do you seek in retirement?",
+    "options": [
+      { "text": "Peace", "personality": "ISFJ" },
+      { "text": "Adventure", "personality": "ESFP" },
+      { "text": "Learning", "personality": "INTP" },
+      { "text": "Helping others", "personality": "ENFJ" }
+    ]
+  }
+]

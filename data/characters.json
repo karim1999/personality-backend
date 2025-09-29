@@ -1,0 +1,130 @@
+[
+  {
+    "type": "INTJ",
+    "name": "The Architect",
+    "description": "Innovative, strategic, and focused on long-term goals.",
+    "strengths": ["Logical thinking", "Strategic planning", "Independence"],
+    "weaknesses": ["Perfectionism", "Impatience", "Difficulty with emotions"],
+    "careers": ["Software Engineer", "Scientist", "Lawyer", "Strategist"]
+  },
+  {
+    "type": "INTP",
+    "name": "The Thinker",
+    "description": "Analytical, abstract thinker, and curious about theories.",
+    "strengths": ["Analytical skills", "Creativity", "Problem-solving"],
+    "weaknesses": ["Overthinking", "Indecision", "Detached"],
+    "careers": ["Philosopher", "Engineer", "Researcher", "Data Scientist"]
+  },
+  {
+    "type": "ENTJ",
+    "name": "The Commander",
+    "description": "Bold, decisive, and thrives on leadership and efficiency.",
+    "strengths": ["Leadership", "Confidence", "Strategic planning"],
+    "weaknesses": ["Stubbornness", "Impatience", "Dominance"],
+    "careers": ["CEO", "Lawyer", "Consultant", "Military Officer"]
+  },
+  {
+    "type": "ENTP",
+    "name": "The Debater",
+    "description": "Energetic, quick-witted, and loves new challenges.",
+    "strengths": ["Creativity", "Curiosity", "Persuasiveness"],
+    "weaknesses": ["Argumentative", "Easily bored", "Impulsive"],
+    "careers": ["Entrepreneur", "Journalist", "Marketing Specialist", "Lawyer"]
+  },
+  {
+    "type": "INFJ",
+    "name": "The Advocate",
+    "description": "Idealistic, insightful, and driven by strong values.",
+    "strengths": ["Empathy", "Insight", "Creativity"],
+    "weaknesses": ["Perfectionism", "Overly private", "Burnout"],
+    "careers": ["Counselor", "Psychologist", "Writer", "Teacher"]
+  },
+  {
+    "type": "INFP",
+    "name": "The Mediator",
+    "description": "Empathetic, imaginative, and seeks meaning in everything.",
+    "strengths": ["Compassion", "Creativity", "Loyalty"],
+    "weaknesses": ["Overly idealistic", "Sensitive", "Indecisive"],
+    "careers": ["Writer", "Artist", "Therapist", "Humanitarian"]
+  },
+  {
+    "type": "ENFJ",
+    "name": "The Protagonist",
+    "description": "Charismatic, inspiring, and deeply connected to others.",
+    "strengths": ["Leadership", "Empathy", "Charisma"],
+    "weaknesses": ["Overcommitting", "Overly idealistic", "Sensitive to criticism"],
+    "careers": ["Teacher", "Politician", "Coach", "HR Manager"]
+  },
+  {
+    "type": "ENFP",
+    "name": "The Campaigner",
+    "description": "Enthusiastic, social, and always seeking inspiration.",
+    "strengths": ["Creativity", "Energy", "Communication"],
+    "weaknesses": ["Disorganization", "Overthinking", "Procrastination"],
+    "careers": ["Writer", "Actor", "Photographer", "Marketing Specialist"]
+  },
+  {
+    "type": "ISTJ",
+    "name": "The Logistician",
+    "description": "Practical, organized, and values responsibility.",
+    "strengths": ["Reliability", "Organization", "Duty-focused"],
+    "weaknesses": ["Rigidity", "Stubbornness", "Insensitive at times"],
+    "careers": ["Accountant", "Lawyer", "Military", "Auditor"]
+  },
+  {
+    "type": "ISFJ",
+    "name": "The Nurturer",
+    "description": "Caring, loyal, and focused on protecting others.",
+    "strengths": ["Compassion", "Dedication", "Practical support"],
+    "weaknesses": ["Overly selfless", "Avoids conflict", "Sensitive"],
+    "careers": ["Nurse", "Teacher", "Social Worker", "Counselor"]
+  },
+  {
+    "type": "ESTJ",
+    "name": "The Executive",
+    "description": "Organized, direct, and thrives on structure.",
+    "strengths": ["Leadership", "Organization", "Loyalty"],
+    "weaknesses": ["Stubbornness", "Insensitive", "Too focused on rules"],
+    "careers": ["Manager", "Judge", "Military Officer", "Project Manager"]
+  },
+  {
+    "type": "ESFJ",
+    "name": "The Caregiver",
+    "description": "Warm, social, and always ready to help others.",
+    "strengths": ["Empathy", "Supportive", "Loyalty"],
+    "weaknesses": ["Approval-seeking", "Overly selfless", "Avoids conflict"],
+    "careers": ["Nurse", "Teacher", "Event Planner", "HR Specialist"]
+  },
+  {
+    "type": "ISTP",
+    "name": "The Virtuoso",
+    "description": "Practical, bold, and thrives on hands-on problem solving.",
+    "strengths": ["Adaptability", "Problem-solving", "Independence"],
+    "weaknesses": ["Risk-taking", "Easily bored", "Insensitive"],
+    "careers": ["Engineer", "Mechanic", "Pilot", "Detective"]
+  },
+  {
+    "type": "ISFP",
+    "name": "The Artist",
+    "description": "Gentle, creative, and lives in the present moment.",
+    "strengths": ["Creativity", "Flexibility", "Empathy"],
+    "weaknesses": ["Indecisive", "Avoids conflict", "Easily stressed"],
+    "careers": ["Artist", "Designer", "Chef", "Musician"]
+  },
+  {
+    "type": "ESTP",
+    "name": "The Entrepreneur",
+    "description": "Energetic, bold, and thrives on excitement.",
+    "strengths": ["Confidence", "Adaptability", "Social skills"],
+    "weaknesses": ["Impulsive", "Risk-taking", "Easily bored"],
+    "careers": ["Entrepreneur", "Salesperson", "Actor", "Athlete"]
+  },
+  {
+    "type": "ESFP",
+    "name": "The Entertainer",
+    "description": "Fun-loving, social, and lives in the moment.",
+    "strengths": ["Charm", "Energy", "Enthusiasm"],
+    "weaknesses": ["Impulsive", "Easily bored", "Avoids long-term planning"],
+    "careers": ["Actor", "Musician", "Performer", "Tour Guide"]
+  }
+]
