@@ -1,74 +1,65 @@
-import fetch from "node-fetch";
+// api/analyze-answers.js
+// Expects JSON body: { answers: [...] }
+// NOTE: requires OPENAI_API_KEY set in Vercel environment variables if using OpenAI.
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+const fetch = require("node-fetch");
 
-  const { age, answers } = req.body;
-
-  if (!age || !answers || !Array.isArray(answers)) {
-    return res.status(400).json({ error: "Age and answers array are required" });
-  }
-
+module.exports = async (req, res) => {
   try {
-    const personalityCount = {};
-    answers.forEach((ans) => {
-      if (ans.personality) {
-        personalityCount[ans.personality] =
-          (personalityCount[ans.personality] || 0) + 1;
-      }
-    });
-
-    let bestPersonality = null;
-    let maxCount = -1;
-    for (const [personality, count] of Object.entries(personalityCount)) {
-      if (count > maxCount) {
-        maxCount = count;
-        bestPersonality = personality;
-      }
+    if (req.method !== "POST") {
+      return res.status(405).json({ error: "Only POST allowed" });
     }
 
-    if (!bestPersonality) {
-      return res.json({
-        result: {
-          personality: "Unknown",
-          name: "",
-          description: "No match found",
-          traits: [],
-          weaknesses: [],
-          careers: [],
-        },
+    const { answers } = req.body || {};
+    if (!answers || !Array.isArray(answers)) {
+      return res.status(400).json({ error: "Invalid payload: answers expected" });
+    }
+
+    // --- Simple local analysis fallback (in case no OpenAI key) ---
+    if (!process.env.OPENAI_API_KEY) {
+      // lightweight mock analysis
+      const summary = answers.join(" ").slice(0, 200);
+      return res.status(200).json({
+        engine: "mock",
+        summary,
+        suggestedCareers: ["Lawyer", "Consultant", "Manager"]
       });
     }
 
-    const queryUrl = `${process.env.DIRECTUS_URL}/items/personalities?filter[type][_eq]=${bestPersonality}`;
-    const response = await fetch(queryUrl);
-    const data = await response.json();
+    // --- If OPENAI_API_KEY exists, call OpenAI (example using REST) ---
+    const apiKey = process.env.OPENAI_API_KEY;
+    const prompt = `Analyze these answers and produce a short personality summary and 5 suggested careers:\n\n${JSON.stringify(answers)}`;
 
-    const p = data.data && data.data[0];
-
-    res.json({
-      result: p
-        ? {
-            personality: p.type,
-            name: p.name,
-            description: p.description,
-            traits: p.strengths || [],
-            weaknesses: p.weaknesses || [],
-            careers: p.careers || [],
-          }
-        : {
-            personality: bestPersonality,
-            name: "",
-            description: "No description available",
-            traits: [],
-            weaknesses: [],
-            careers: [],
-          },
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini", // change if desired
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 500
+      })
     });
+
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("OpenAI error:", text);
+      return res.status(502).json({ error: "OpenAI API error", detail: text });
+    }
+
+    const data = await response.json();
+    const content = (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || "";
+
+    return res.status(200).json({
+      engine: "openai",
+      raw: data,
+      analysis: content
+    });
+
   } catch (err) {
-    console.error("Error analyzing answers:", err.message);
-    res.status(500).json({ error: "Failed to analyze answers" });
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
-}
+};
