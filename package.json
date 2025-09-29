@@ -4,14 +4,15 @@
   "description": "Personality backend adapted for Vercel",
   "scripts": {
     "dev": "vercel dev",
+    "start": "vercel dev",
     "lint": "echo \"no lint configured\""
   },
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   },
   "dependencies": {
     "openai": "^4.0.0",
     "node-fetch": "^3.3.1"
   },
-  "type": "commonjs"
+  "type": "module"
 }
